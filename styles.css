@@ -1,10 +1,20 @@
 body {
     background-color: #f5f5dc;
     font-family:Georgia, 'Times New Roman', Times, serif;
+    display: flex;             /* Use flexbox */
+    justify-content: center;   /* Center horizontally */
+    align-items: center;       /* Center vertically */
+    height: 100vh;             /* Full viewport height */
+    margin: 0;                 /* Remove default margin */
+    flex-direction: column;    /* Stack elements vertically */
+}
+li {
+  list-style-type: none;     /* Remove default list styling */
 }
 li .link{
+
     font-family:Georgia, 'Times New Roman', Times, serif;
-    font-size: 30px;
+    font-size: 44px;
     background-color: darkcyan;
     border-radius: 50px;
     color: aliceblue;
@@ -12,8 +22,22 @@ li .link{
   text-decoration: none;
 display: inline-block;
 margin: 6px;
+box-sizing: border-box;
+text-align: center;
 
 }
+li .link:hover {
+
+  box-shadow: 0px 6px 12px 4px rgba(0, 0, 0, 0.3); 
+  transform: scale(1.5);  
+}
 .flagcounter{
-  size: 100px;
+  size: 300px;
+}
+h1 {
+  position: absolute;  /* Required to use top, left, and transform */
+  top: 2%;  /* Align to the top of the page */
+  left: 50%;  /* Move horizontally to the center */
+  transform: translateX(-50%);  /* Adjust to truly center the element */
+  
 }
